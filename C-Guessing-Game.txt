@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include<stdlib.h>
+#include<time.h>
+
+int main() {
+   int number,guess,attempt=0;
+  
+   srand(time(0));
+   number=rand()%100+1;
+   printf("Welcome in the number guessing game by bdarshancodes!...:)\n");
+   printf("Enter your guessed number...\n");
+   scanf("%d",&guess);
+   attempt++;
+   while(guess!=number){
+   if(guess>number){
+   printf("Oh! You are almost there Please enter smaller number....\n");
+   }else if(guess<number){
+   printf("Oh! You are almost get it please enter greater number....\n");
+   }
+    
+   scanf("%d",&guess);
+   attempt++;
+   }
+   printf("congratulation! You just guessed it perfectly in %d attempt.\n",attempt);
+   
+   
+   
+    return 0;
+}
